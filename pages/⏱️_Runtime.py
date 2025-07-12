@@ -2,11 +2,12 @@ import streamlit as st
 
 st.set_page_config(page_title="Runtime", page_icon="⏱️")
 
-st.sidebar.success("""
-**The summary for the runtime variable**
-
-In a left-skewed distribution, the mean is typically less than the median because the lower tail pulls the mean down. Therefore, the median runtime is likely greater than $$92.5$$ minutes. The left skew might be caused by a few films with very short runtimes, which could be outliers. These outliers can impact the mean significantly more than they would impact the median.
-""")
+with st.sidebar:
+    st.write("""
+    **The summary for the runtime variable**
+    
+    In a left-skewed distribution, the mean is typically less than the median because the lower tail pulls the mean down. Therefore, the median runtime is likely greater than $$92.5$$ minutes. The left skew might be caused by a few films with very short runtimes, which could be outliers. These outliers can impact the mean significantly more than they would impact the median.
+    """)
 
 st.write("# Runtime ⏱️")
 
@@ -15,8 +16,10 @@ st.header("The summary for the runtime variable", divider="rainbow")
 st.write("""
 There are two aspects of this distribution plot that might lead to concern about using the mean and standard deviation:
 
-The distribution is left-skewed — it has a long tail of low values on the left side. These values might influence the mean to be lower.
-There is a single high value of just above 200 minutes. This value might be an outlier that influences the mean to be higher.
+- The distribution is left-skewed — it has a long tail of low values on the left side. These values might influence 
+the mean to be lower.
+- There is a single high value of just above 200 minutes. This value might be an outlier that influences the mean to 
+be higher.
 """)
 
 st.write("""

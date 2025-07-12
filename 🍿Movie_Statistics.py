@@ -1,14 +1,21 @@
 import streamlit as st
+import pandas as pd
 
+df = pd.read_feather("clean_df.feather")
+
+print(df.head())
 st.set_page_config(page_title="Movie Statistics", page_icon="🍿")
 
-st.sidebar.success("""
-**Explore Netflix data with an understanding of summary statistics**
+with st.sidebar:
+    st.title("Netflix Original Films & IMDb Scores")
 
-You can:
-- Interpret summary statistics in context
-- Make choices about which summary statistics are appropriate based on the situation
-""")
+    st.write("""
+    **Explore Netflix data with an understanding of summary statistics**
+    
+    You can:
+    - Interpret summary statistics in context
+    - Make choices about which summary statistics are appropriate based on the situation
+    """)
 
 st.write("# Movie Statistics 🍿")
 

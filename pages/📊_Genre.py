@@ -2,11 +2,12 @@ import streamlit as st
 
 st.set_page_config(page_title="Genre", page_icon="📊")
 
-st.sidebar.success("""
-**The summary for the genre variable**
-
-From our analysis of IMDb scores across various film genres, we found that documentaries and films classified under “other” genres received the highest IMDb scores. In contrast, documentaries in other languages or with multiple primary languages tended to have lower IMDb scores.
-""")
+with st.sidebar:
+    st.write("""
+    **The summary for the genre variable**
+    
+    From our analysis of IMDb scores across various film genres, we found that documentaries and films classified under “other” genres received the highest IMDb scores. In contrast, documentaries in other languages or with multiple primary languages tended to have lower IMDb scores.
+    """)
 
 st.write("# Genre 📊")
 

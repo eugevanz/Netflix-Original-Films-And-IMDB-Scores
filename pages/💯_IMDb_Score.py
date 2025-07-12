@@ -2,15 +2,16 @@ import streamlit as st
 
 st.set_page_config(page_title="IMDB Score", page_icon="💯")
 
-st.sidebar.success("""
-**Distribution of IMDb scores**
-
-With this mostly symmetrical distribution, the values are distributed evenly around the mean, but a slight positive 
-skew indicates that there are a few lower values pulling the tail of the distribution to the left. With a standard 
-deviation of $$1.0$$, most data points are within 1 unit of the mean, indicating relatively low variability. The 
-frequency range from about $$1$$ to approximately $$75$$ suggests a wide spread of occurrence for different values 
-within this distribution.
-""")
+with st.sidebar:
+    st.write("""
+    **Distribution of IMDb scores**
+    
+    With this mostly symmetrical distribution, the values are distributed evenly around the mean, but a slight positive 
+    skew indicates that there are a few lower values pulling the tail of the distribution to the left. With a standard 
+    deviation of $$1.0$$, most data points are within 1 unit of the mean, indicating relatively low variability. The 
+    frequency range from about $$1$$ to approximately $$75$$ suggests a wide spread of occurrence for different values 
+    within this distribution.
+    """)
 
 st.write("# IMDB Score 💯")
 

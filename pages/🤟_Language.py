@@ -2,13 +2,14 @@ import streamlit as st
 
 st.set_page_config(page_title="Language", page_icon="🤟")
 
-st.sidebar.success("""
-**Films in each language**
-
-There are $$360$$ films with English as the primary language. 
-To get the proportion, we divide $$360$$ by the total of $$503$$ films: $$360 ÷ 503 = 0.72$$. 
-About $$0.72$$ of the films have English as their primary language.
-""")
+with st.sidebar:
+    st.write("""
+    **Films in each language**
+    
+    There are $$360$$ films with English as the primary language. 
+    To get the proportion, we divide $$360$$ by the total of $$503$$ films: $$360 ÷ 503 = 0.72$$. 
+    About $$0.72$$ of the films have English as their primary language.
+    """)
 
 st.write("# Language 🤟")
 
